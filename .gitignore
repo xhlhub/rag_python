@@ -1,0 +1,69 @@
+# Python specific ignores
+*.py[cod]
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Package and environment managers
+.venv/
+env/
+.env
+.DS_Store
+pip-wheel-metadata/
+.virtualenv/
+.pipenv/
+node_modules/
+# local documents for rag
+__local_doc__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test and coverage tools
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Distribution / packaging
+ MANIFEST
+
+# Pytest
+pytest_cache/
+
+# IDEs and text editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Django-specific ignores
+*.sqlite3
+*.db
+media/
+venv/
+staticfiles/
+
+# RAG or Machine Learning project specific
+datasets/  # 如果是下载的大型数据集或缓存的数据
+models/weights/*/*.pth  # 预训练模型权重，仅添加训练过程中的中间或最终权重文件，如果不需要版本控制的话
+runs/  # 例如PyTorch Lightning或TensorFlow的日志和检查点目录
+
+# Other generated files
+*.pid
+*.swp
+*~
+
+# Specific to your project
+# Add any additional files or directories that you want Git to ignore here.

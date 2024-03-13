@@ -1,0 +1,4 @@
+openai>=1.13.3
+pdfminer.six==20231228  # 使用最新稳定版本或指定具体版本号
+flask>=3.0.2
+flask-cors>=4.0.0
