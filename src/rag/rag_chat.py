@@ -48,20 +48,3 @@ __QUERY__
 
 请用中文回答用户问题。
 """
-
-# user_query = "山姆职业是?"
-
-# # 1. 检索
-# # search_results = search(user_query, 2)
-# search_results = "山姆是一个律师"
-
-# # 2. 构建 Prompt
-# prompt = build_prompt(prompt_template, info=search_results, query=user_query)
-# print("===Prompt===")
-# print(prompt)
-
-# # 3. 调用 LLM
-# response = get_completion(prompt)
-
-# print("===回复===")
-# print(response)
