@@ -21,7 +21,7 @@ def create_db(document_url):
     paragraphs = extract_text_from_pdf(document_url, min_line_length=10)
     print("正在切割文档")
     # 创建一个向量数据库对象
-    vector_db = MyVectorDBConnector("demo", get_embeddings)
+    vector_db = MyVectorDBConnector("rag_demo", get_embeddings)
     # 向向量数据库中添加文档
     vector_db.add_documents(paragraphs)
     return vector_db
