@@ -1,7 +1,7 @@
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer
 
-def extract_text_from_pdf(filename, page_numbers=None, min_line_length=1):
+def extract_text_from_pdf(filename, page_numbers=None, min_line_length=10):
     '''从 PDF 文件中（按指定页码）提取文字'''
     paragraphs = []
     buffer = ''
@@ -15,7 +15,7 @@ def extract_text_from_pdf(filename, page_numbers=None, min_line_length=1):
             if isinstance(element, LTTextContainer):
                 full_text += element.get_text() + '\n'
     # 按空行分隔，将文本重新组织成段落
-    lines = full_text.split('\n')
+    lines = full_text.split('\n\n')
     for text in lines:
         if len(text) >= min_line_length:
             buffer += (' '+text) if not text.endswith('-') else text.strip('-')
