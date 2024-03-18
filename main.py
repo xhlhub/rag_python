@@ -43,7 +43,7 @@ def rag_chat():
 def upload_file():
     if 'file' not in request.files:
         return '没有文件上传'
-    print("file:",request.files)
+    # print("file:",request.files)
     file = request.files['file']
     if file.filename == '':
         return '没有选择文件'
