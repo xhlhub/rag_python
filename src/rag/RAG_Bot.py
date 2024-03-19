@@ -22,7 +22,7 @@ class RAG_Bot:
         # 2. 构建 Prompt
         prompt = build_prompt(
             prompt_template, info=search_results['documents'][0], query=user_query)
-        # print("prompt：",prompt)
+        print("prompt：",prompt)
         # 3. 调用 LLM
         response = self.llm_api(prompt)
         return response
